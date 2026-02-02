@@ -1,54 +1,29 @@
 {
-	"name": "@walletconnect/solana-adapter",
-	"version": "0.0.8",
-	"license": "Apache-2.0",
-	"type": "module",
-	"main": "./dist/adapter.js",
-	"types": "./dist/types/adapter.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/types/adapter.d.ts",
-			"import": "./dist/adapter.js",
-			"default": "./dist/adapter.js"
-		},
-		"./core": {
-			"types": "./dist/types/core.d.ts",
-			"import": "./dist/core.js",
-			"default": "./dist/core.js"
-		}
-	},
-	"files": [
-		"dist",
-		"src",
-		"LICENSE"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"clean": "rm -rf dist",
-		"watch": "tsc --watch",
-		"build": "pnpm run clean && tsc"
-	},
-	"devDependencies": {
-		"@solana/wallet-adapter-base": "^0.9.23",
-		"@solana/web3.js": "1.98.0",
-		"@types/node": "22.14.1",
-		"@walletconnect/types": "2.19.0",
-		"typescript": "^5.5.2"
-	},
-	"dependencies": {
-		"@reown/appkit": "1.7.3",
-		"@walletconnect/universal-provider": "2.19.0",
-		"@walletconnect/utils": "2.19.0",
-		"bs58": "6.0.0"
-	},
-	"peerDependencies": {
-		"@solana/wallet-adapter-base": "0.x",
-		"@solana/web3.js": "1.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/WalletConnect/walletconnect-solana-adapter"
-	}
+  "name": "goxsolana",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@solana/web3.js": "^1.95.3",
+    "@walletconnect/solana-adapter": "^0.1.0",
+    "@aptos-labs/ts-sdk": "^1.0.0",
+    "@metaplex-foundation/umi": "^1.0.0",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.0.0",
+    "@metaplex-foundation/mpl-token-metadata": "^1.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31"
+  }
 }
